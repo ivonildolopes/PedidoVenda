@@ -1,0 +1,86 @@
+<html>
+	<body>
+		
+		<h1>  <b> IBYTE BLACK WEEKEND </b> </h1>	
+	
+	
+		<table id="capa">	   
+		   
+		   <tr>
+		   	 <td style="width:100px"> Numero: </td>
+		   	 <td>$pedido.id</td>
+		   </tr>
+		   
+		   <tr>
+		   	 <td> Vendido Por: </td>
+		   	 <td>$pedido.vendedor.nome </td>
+		   </tr>
+		
+			<tr>
+		   	 <td> Cliente: </td>
+		   	 <td>$pedido.cliente.nome </td>
+		   </tr>
+		   
+		   <tr>
+		   	 <td> Valor Total: </td>
+		   	 <td>$numberTool.format("¤ #0.00",$pedido.valorTotal,$locale) </td>
+		   </tr>
+		  	
+		
+		</table>
+	
+	
+		<table border="1" cellspacing="0" cellpadding="3">
+			<tr>
+				<th>Produto </th>
+				<th>Valor Unitario </th>
+				<th>Quantidade </th>
+				<th>Valor Total </th>
+			</tr>
+			
+			#foreach($item in $pedido.itens)
+				#if($item.produto.id)
+				<tr>
+					<th>$item.produto.nome </th>
+					<th>$numberTool.format("¤ #0.00",$item.produto.valorUnitario,$locale) </th>
+					<th>$item.quantidade </th>
+					<th>$numberTool.format("¤ #0.00",$item.valorTotal,$locale) </th>
+				</tr>
+				#end
+			#end
+		
+		</table>
+		
+		<table id="entrega">	   
+		   
+		   <tr>
+		   	 <td style="width:100px"> Forma de Pagamento: </td>
+		   	 <td>$pedido.formaPagamento</td>
+		   </tr>
+		   
+		   <tr>
+		   	 <td> Data da Entrega: </td>
+		   	 <td>$pedido.dataEntrega </td>
+		   </tr>
+		
+			<tr>
+		   	 <td> Cidade: </td>
+		   	 <td>$pedido.enderecoEntrega.cidade </td>
+		   </tr>
+		   
+		   <tr>
+		   	 <td> Estado: </td>
+		   	 <td>$pedido.enderecoEntrega.uf </td>
+		   </tr>
+		  	
+		
+		</table>
+		
+		
+		<h3> Obrigado pela escolha
+		<p>
+		acesse nosso site: ibyte.com.br ou entre em  contato pelo whatsapp : (85) 9.9166.7999
+		
+	
+	</body>
+</html>
