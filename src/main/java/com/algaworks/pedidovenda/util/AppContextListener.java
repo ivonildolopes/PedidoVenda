@@ -8,9 +8,7 @@ import javax.servlet.annotation.WebListener;
 public class AppContextListener implements ServletContextListener {
 
 	@Override
-	public void contextDestroyed(ServletContextEvent event) {
-		// TODO Auto-generated method stub
-		
+	public void contextDestroyed(ServletContextEvent event) {		
 	}
 
 	@Override
