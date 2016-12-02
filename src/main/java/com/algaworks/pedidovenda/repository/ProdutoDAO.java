@@ -40,7 +40,6 @@ public class ProdutoDAO implements Serializable {
 			manager.flush();
 
 		} catch (PersistenceException e) {
-			// TODO: handle exception
 			throw new NegocioException("Produto nao pode ser excluido");
 		}
 	}

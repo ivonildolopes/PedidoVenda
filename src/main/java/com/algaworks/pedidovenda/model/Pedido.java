@@ -281,7 +281,6 @@ public class Pedido implements Serializable {
 
 	@Transient
 	public boolean isValorTotalNegativo() {
-		// TODO Auto-generated method stub
 		return this.valorTotal.compareTo(BigDecimal.ZERO) < 0;
 	}
 

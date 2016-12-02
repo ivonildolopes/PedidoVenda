@@ -20,7 +20,7 @@
 		<h:form>
 			<h1>#{cadastroProdutoBean.verificaEdicao() ? 'Edição de Produto' : 'Novo Produto'}</h1>
 
-			<p:messages autoUpdate="true" closable="true" />
+			<p:messages autoUpdate="true" closable="true" id="msg" />
 
 			<p:toolbar style="margin-top: 20px">
 				<p:toolbarGroup>
@@ -69,6 +69,11 @@
 				<p:outputLabel value="Estoque" for="estoque" />
 				<p:inputText id="estoque" size="10" maxlength="5"
 					value="#{cadastroProdutoBean.produto.quantidadeEstoque}" />
+					
+				<p:outputLabel value="Escolher imagem" for="imagem" />	
+				<p:fileUpload mode="advanced" auto="true" label="Selecionar Imagem"
+				update="msg, foto" fileUploadListener="#{cadastroProdutoBean.enviaFoto}"/>
+				
 			</p:panelGrid>
 		</h:form>
 	</ui:define>

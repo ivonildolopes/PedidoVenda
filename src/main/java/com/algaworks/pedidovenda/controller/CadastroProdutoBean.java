@@ -76,6 +76,8 @@ public class CadastroProdutoBean implements Serializable {
 	public boolean verificaEdicao(){
 		return this.produto.getId() != null;
 	}
+	
+	
 	//get and set
 	public Produto getProduto() {
 		return produto;

@@ -62,4 +62,6 @@ public class ProdutoService implements Serializable {
 	public Produto porSku(String sku){
 		return this.produtos.porSku(sku);
 	}
+	
+	
 }
