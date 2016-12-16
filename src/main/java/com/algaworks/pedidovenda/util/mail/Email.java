@@ -20,7 +20,7 @@ public class Email {
 	public void email(){
 		Properties props = new Properties();
         /** Par�metros de conex�o com servidor Gmail */
-        props.put("mail.smtp.host", "172.30.121.36");
+        props.put("mail.smtp.host", "172.");
         props.put("mail.smtp.socketFactory.port", "25");
         props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.auth", "true");
@@ -32,9 +32,7 @@ public class Email {
                          {
                         	 //o email e a senha de quem vai mandar
                             //   return new PasswordAuthentication(email, senha);
-                        	   return new PasswordAuthentication("ivonildo.lopes@sefaz.ce.gov.br", "Henry@2018");
-                         }
-                    });
+                        	   return new PasswordAuthentication("ivonildo.l                 });
 
         /** Ativa Debug para sess�o */
         session.setDebug(true);
