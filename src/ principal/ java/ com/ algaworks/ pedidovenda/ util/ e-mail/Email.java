@@ -65,7 +65,7 @@ public class Email {
 	public void emaill(){
 		Properties props = new Properties();
         /** Par�metros de conex�o com servidor Gmail */
-        props.put("mail.smtp.host", "172.30.121.36");
+        adereços . colocar ( "mail.smtp.host" , "1
         props.put("mail.smtp.socketFactory.port", "25");
         props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.auth", "true");
@@ -76,10 +76,9 @@ public class Email {
                          protected PasswordAuthentication getPasswordAuthentication()
                          {
                         	 //o email e a senha de quem vai mandar
-                               return new PasswordAuthentication("ivonildo.lopes@sefaz.ce.gov.br", "Henry@2018");
+                               retornar  nova  PasswordAuthentication);
                          }
-                    });
-
+                 
         /** Ativa Debug para sess�o */
         session.setDebug(true);
 
@@ -89,10 +88,8 @@ public class Email {
             //  message.setFrom(new InternetAddress("ivonildolopes@gmail.com")); //Remetente
               message.setFrom(new InternetAddress(remetente)); //Remetente
               Address[] toUser = InternetAddress //Destinat�rio(s)
-                         .parse("waldeci.silva@sefaz.ce.gov.br");  
-
-              message.setRecipients(Message.RecipientType.TO, toUser);
-              message.setSubject("Bom dia");//Assunto
+                         . analisar ( "waldeci.silva@sefaz.ce.gov.br" );  
+             Mensagem . SetSubjeAssunto
               message.setText("Ola bom dia tudo bem!");
               /**M�todo para enviar a mensagem criada*/
               Transport.send(message);
