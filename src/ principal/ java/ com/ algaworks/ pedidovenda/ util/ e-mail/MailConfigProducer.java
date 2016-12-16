@@ -29,11 +29,11 @@ public class MailConfigProducer {
 		
 		
 		SimpleMailConfig config = new SimpleMailConfig();
-		config.setServerHost("172.30.121.36");
+		configuração . setServerHost ( "
 		config.setServerPort(25);
 		config.setAuth(true);
-		config.setUsername("ivonildo.lopes@sefaz.ce.gov.br");
-		config.setPassword("Henry@2018");
+		configuracao . setUsername ( "Ivonildo.)
+		configuracao . setPassword ( "Henry
 		return config;
 		
 		
